@@ -28,7 +28,6 @@ function navigateBack() {
     var iframe = document.getElementById("ntnav_frame");
     // Set the src property of the iframe to the specified URL
     iframe.src = url;
-    urlText.innerHTML = "NTINT://" + link;
   }
   
   document.getElementById("ntnav_frame").addEventListener("load", function() {
