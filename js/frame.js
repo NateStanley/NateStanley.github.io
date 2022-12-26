@@ -45,6 +45,7 @@ function navigateBack() {
     var iframe = document.getElementById("ntnav_frame");
     // Set the src property of the iframe to the specified URL
     iframe.src = url;
+    console.log(url)
   }
   
   document.getElementById("ntnav_frame").addEventListener("load", function() {
@@ -69,12 +70,17 @@ function navigateBack() {
     loadURL(homeURL);
   });
 
-  document.getElementById("ntnav-about-btn").addEventListener("click", function() {
+  document.getElementById("ntnav-nt-btn").addEventListener("click", function() {
     // Load the local file "content.html" in the iframe
-    loadURL(homeURL);
+    loadURL("sites/centralcommand.nt/content.html");
   });
 
-  document.getElementById("ntnav-upgrades-btn").addEventListener("click", function() {
+  document.getElementById("ntnav-ntef-btn").addEventListener("click", function() {
     // Load the local file "content.html" in the iframe
-    loadURL(homeURL);
+    loadURL("sites/ntef.nt/content.html");
+  });
+
+  document.getElementById("ntnav-pp-btn").addEventListener("click", function() {
+    // Load the local file "content.html" in the iframe
+    loadURL("sites/pehlanport.nt/content.html");
   });
