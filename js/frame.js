@@ -52,7 +52,15 @@ function navigateBack() {
     var url = document.getElementById("ntnav_frame").contentWindow.location.href;
     var urlText = document.getElementById("url-text");
     console.log(url);
+    urlText.style.color = "black";
     urlText.innerHTML = "NTINT://" + createPathfromURL(url);
+    //check if url has a different top level domain than pehlanport.com
+    var fullURL = new URL(url);
+    var mainDomain = fullURL.hostname;
+    if (mainDomain != "pehlanport.com") {
+        urlText.style.color = "red";
+        loadURL("sites/nt.security.local/alert.html")
+    }
   });
 
 
