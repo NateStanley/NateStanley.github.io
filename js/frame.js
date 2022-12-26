@@ -32,7 +32,7 @@ function navigateBack() {
     var pathArray = pathname.split("/");
     var newPath = "";
 
-    for (var i = 1; i < pathArray.length; i++) {
+    for (var i = 2; i < pathArray.length; i++) {
         newPath += pathArray[i] + "/";
     }
     return newPath;
