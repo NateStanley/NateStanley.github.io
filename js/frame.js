@@ -54,6 +54,9 @@ function navigateBack() {
     urlText.innerHTML = "NTINT://" + createPathfromURL(url);
   });
 
+
+  var homeURL = "sites/pehlanport.nt/content.html"
+
   // Add a click event listener to the element with the id "ntnav-back-button"
   document.getElementById("ntnav-back-button").addEventListener("click", navigateBack);
   
@@ -63,15 +66,15 @@ function navigateBack() {
   // Add a click event listener to the element with the id "ntnav-home-button"
   document.getElementById("ntnav-home-button").addEventListener("click", function() {
     // Load the local file "content.html" in the iframe
-    loadURL("content.html", "pehlanport.nt");
+    loadURL(homeURL);
   });
 
   document.getElementById("ntnav-about-btn").addEventListener("click", function() {
     // Load the local file "content.html" in the iframe
-    loadURL("content.html", "navigator.nt");
+    loadURL(homeURL);
   });
 
   document.getElementById("ntnav-upgrades-btn").addEventListener("click", function() {
     // Load the local file "content.html" in the iframe
-    loadURL("content.html", "navigator.nt/upgrade");
+    loadURL(homeURL);
   });
