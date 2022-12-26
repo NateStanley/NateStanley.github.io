@@ -3,39 +3,45 @@
 
 <head>
     <link rel="stylesheet" href="css/browser.css">
+    <script src="js/frame.js" defer></script>
+
 </head>
 <body>
 
-    <div class="catscape-browser">
+    <div class="ntnav-browser">
         <div class="top-bar"> <span class="title">NanoTrasen Navigator 2.0</span>
             <div class="btn-close-window"></div>
         </div>
         <div class="toolbar">
             <div class="buttons">
                 <ul>
-                    <li><a href="javascript:void(0);" class="js-open-dialogue" data-open="js-about-dialogue">What is
-                        NanoTrasen Naviagor?</a></li>
-                    <li><a href="javascript:void(0);" class="js-open-dialogue" data-open="js-upgrade-dialogue">Upgrades</a>
+                    <li><a id="ntnav-about-btn" class="js-open-dialogue" data-open="js-about-dialogue">What is
+                        NanoTrasen Navigator?</a></li>
+                    <li><a id="ntnav-upgrades-btn" class="js-open-dialogue" data-open="js-upgrade-dialogue">Upgrades</a>
                     </li>
                 </ul>
             </div>
             <div class="address-bar">
-                <div class="label">Original Address</div>
+                <div id="ntnav-back-button" class="btn-back-window"></div>
+                <div id="ntnav-next-button" class="btn-forward-window"></div>
+                <div id="ntnav-home-button" class="btn-home-window"></div>
                 <div class="field"> <span
-                        class="url js-iframe-navbar">NTINT://pehlanport.com/index.html/</span> </div>
+                        id="url-text" class="url js-iframe-navbar">NTINT://pehlanport.nt</span> </div>
             </div>
             <div class="divider-bar"></div>
             <div class="loading"></div>
         </div>
         <div class="website">
-            <div class="website-frame"> <iframe class="old-school-scroll js-iframe"
-                    src="content.html"
+            <div class="website-frame"> <iframe id="ntnav_frame" class="old-school-scroll js-iframe"
+                    src="   content.html"
                     sandbox="allow-same-origin allow-scripts allow-forms"></iframe> </div>
         </div>
         <div class="status-bar">
             <div class="status-box"></div>
             <div class="archive-source">
-                NanoTrasen Navigator 2.0
+                <a>
+                    NanoTrasen Navigator 2.0
+                </a>
             </div>
         </div>
     </div>
