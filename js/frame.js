@@ -35,7 +35,7 @@ function navigateBack() {
     var url = document.getElementById("ntnav_frame").contentWindow.location.href;
     var urlText = document.getElementById("ntnav-url");
     console.log(url);
-    urlText.innerHTML = "NTINT://" + link;
+    urlText.innerHTML = "NTINT://" + url;
   });
 
   // Add a click event listener to the element with the id "ntnav-back-button"
