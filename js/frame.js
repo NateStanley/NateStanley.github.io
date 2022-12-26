@@ -21,6 +21,23 @@ function navigateBack() {
       iframe.contentWindow.history.forward();
     }
   }
+
+  function createPathfromURL(url) {
+    //given a full url, create a string for the ntnav url text
+    var fullURL = new URL(url);
+
+    //get main domain
+    var mainDomain = fullURL.hostname;
+    var pathname = fullURL.pathname;
+    var pathArray = pathname.split("/");
+    var newPath = "";
+
+    for (var i = 1; i < pathArray.length; i++) {
+        newPath += pathArray[i] + "/";
+    }
+    return newPath;
+
+  }
   
   // Function to load a URL in the iframe with the id "ntnav_frame"
   function loadURL(url) {
@@ -34,7 +51,7 @@ function navigateBack() {
     var url = document.getElementById("ntnav_frame").contentWindow.location.href;
     var urlText = document.getElementById("url-text");
     console.log(url);
-    urlText.innerHTML = "NTINT://" + url;
+    urlText.innerHTML = "NTINT://" + createPathfromURL(url);
   });
 
   // Add a click event listener to the element with the id "ntnav-back-button"
