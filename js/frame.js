@@ -32,7 +32,7 @@ function navigateBack() {
   
   document.getElementById("ntnav_frame").addEventListener("load", function() {
     var url = document.getElementById("ntnav_frame").contentWindow.location.href;
-    var urlText = document.getElementById("ntnav-url");
+    var urlText = document.getElementById("url-text");
     console.log(url);
     urlText.innerHTML = "NTINT://" + url;
   });
