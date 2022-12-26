@@ -1,0 +1,31 @@
+body {
+    background-color: #555;
+    color: wheat;
+}
+
+table {
+    background-color: #333;
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 80%;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  tr:hover {
+    background-color: #555;
+  }
+  
+  th {
+    background-color: #444;
+    color: white;
+  }
+
+  a {
+    color: #fff;
+  }
+

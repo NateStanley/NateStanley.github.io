@@ -92,3 +92,8 @@ function navigateBack() {
     // Load the local file "content.html" in the iframe
     loadURL("sites/pehlanport.nt/content.html");
   });
+
+  document.getElementById("ntnav-int-btn").addEventListener("click", function() {
+    // Load the local file "content.html" in the iframe
+    loadURL("sites/centralcommand.nt/directory.html");
+  });
