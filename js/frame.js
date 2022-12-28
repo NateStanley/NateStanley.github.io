@@ -52,11 +52,23 @@ function shareURL()
 {
   //get url from iframe
   var path = document.getElementById("ntnav_frame").contentWindow.location.href
+  path = path.split("//").pop();
   var uri = "www.pehlanport.com/?path=" + path
   //encode uri with var path
   var encodedURI = encodeURI(uri);
   //copy to clipboard
   navigator.clipboard.writeText(encodedURI);
+  alert("URL Copied to Clipboard");
+}
+
+function readURL()
+{
+  //parse current url for parameter path
+  var url = new URL(window.location.href);
+  var path = url.searchParams.get("path");
+  if (path != null) {
+    loadURL(path);
+  }
 }
 
 document.getElementById("ntnav_frame").addEventListener("load", function() {
@@ -74,7 +86,7 @@ document.getElementById("ntnav_frame").addEventListener("load", function() {
   }
 });
 
-
+readURL();
 var homeURL = "sites/pehlanport.nt/content.html"
 
 // Add a click event listener to the element with the id "ntnav-back-button"
